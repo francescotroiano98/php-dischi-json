@@ -16,6 +16,15 @@
     <body>
 
         <div id="app">
+            <div class="container">
+                <div class="row">
+                    <ul>
+                        <li v-for="(item, index) in discItems" :key="index">
+                                {{ item.title }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
             
         </div>
 
