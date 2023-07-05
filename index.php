@@ -16,15 +16,35 @@
     <body>
 
         <div id="app">
-            <div class="container">
-                <div class="row">
-                    <ul>
-                        <li v-for="(item, index) in discItems" :key="index">
-                                {{ item.title }}
-                        </li>
-                    </ul>
+            <header>
+                <div>
+                    <img src="" alt="">
                 </div>
-            </div>
+            </header>
+            <main>
+
+                <div class="container">
+
+                        <div class="row row-cols-1 row-cols-md-3 g-4">
+                            <div class="col" v-for="(item, index) in discItems" :key="index" >
+                                <div class="card">
+                                <img :src="discItems[index].poster" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ item.title }}</h5>
+                                    <p class="card-text">{{ item.author }}</p>
+                                    <h5 class="card-title">{{ item.year }}</h5>
+                                </div>
+                                </div>
+                            </div>
+                        </div>    
+
+
+
+                   
+                </div>
+
+            </main>
+            
             
         </div>
 
